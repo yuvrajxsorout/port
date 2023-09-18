@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
 title: Yuvraj Sarout
-logo: /Folder/Image.png
+logo: ![](/Folder/Image.png)
 #description: text below image
 show_downloads: true
