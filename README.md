@@ -9,7 +9,7 @@ I am Yuvraj Sarout, and I'm currently delving deep into the realms of shape opti
 - 🌍 Metz, France
 - 🔗 [LinkedIn](https://linkedin.com/in/yuvrajxsarout)
 
-##🛠️💡 Skills
+🛠️💡 Skills
 - Ansys-Fluent
 - Ansys Structural FEA
 - Tecplot
@@ -20,11 +20,25 @@ I am Yuvraj Sarout, and I'm currently delving deep into the realms of shape opti
 - MATLAB
 - Python
 - Origin Pro
+  
+## 🎓📚 Education
+### PhD in Mechanical Engineering
+_École Nationale Supérieure d'Arts et Métiers (ENSAM), Metz, France (03/2023 - Present)_
+- Thesis: Shape optimization applied to fluid-structure coupling in the steel production process.
+  
+### MSc in Mechanical Engineering
+_Khalifa University of Science and Technology, Abu Dhabi, UAE (08/2020 - Present)_
+- GPA: 3.5/4
+- Thesis: Study of wake and aerodynamic forces on two tandem circular cylinders in cross-flow.
 
+### B.Tech - Mechanical specialization in Automotive
+_VIT University, Vellore, India (06/2016 - 07/2020)_
+- GPA: 8.5/10
+- Thesis: Numerical Simulation of Flow through Scramjet Inlet - Isolator Model with Pressure Feedback
 ## 👨‍💻 Work Experience
 
 ### Doctoral Student
-_École Nationale Supérieure d'Arts et Métiers, Metz, France (03/2023-Present)_
+_ENSAM & Arcelormittal Maizières Research, Metz, France (03/2023-Present)_
 -  Collaborated on a high-profile project with Arcelor Mittal and ENSAM, contributing to advancements in shape optimization techniques.
 -  Proficient in using ANSYS tools, specializing in adjoint optimization methods for efficient design enhancements.
 -  Maintained an active role in the research community, attending workshops and seminars, to integrate the latest advancements into the project's workflow.
@@ -52,20 +66,7 @@ _Team Ojas, Vellore, India (09/2017-05/2019)_
 -  Leveraged advanced manufacturing techniques, specifically vacuum bagging, to ensure a seamless, high-quality finish, and structural integrity of the components
 
 
-## 🎓📚 Education
-### PhD in Mechanical Engineering
-_École Nationale Supérieure d'Arts et Métiers, Metz, France (03/2023 - Present)_
-- Thesis: Shape optimization applied to fluid-structure coupling in the steel production process.
-  
-### MSc in Mechanical Engineering
-_Khalifa University of Science and Technology, Abu Dhabi, UAE (08/2020 - Present)_
-- GPA: 3.5/4
-- Thesis: Study of wake and aerodynamic forces on two tandem circular cylinders in cross-flow.
 
-### B.Tech - Mechanical specialization in Automotive
-_VIT University, Vellore, India (06/2016 - 07/2020)_
-- GPA: 8.5/10
-- Thesis: Numerical Simulation of Flow through Scramjet Inlet - Isolator Model with Pressure Feedback
 
 ## 📑Publications
 
