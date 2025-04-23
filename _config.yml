@@ -1,8 +1,5 @@
 theme: jekyll-theme-minimal
 title: Yuvraj Sarout
 logo: "Folder/Picture1c.png"
+# description: text below image
 show_downloads: true
-
-# Add custom CSS file to override the default theme styles
-sass:
-  style: compressed
