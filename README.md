@@ -1,4 +1,4 @@
-![](/Folder/unnamed.jpg)
+![](/Folder/Untitled_design.png)
 # Doctoral Student
 
 
