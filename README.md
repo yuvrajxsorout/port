@@ -39,10 +39,12 @@ _VIT University, Vellore, India (06/2016 - 07/2020)_
 
 ### Doctoral Student
 _ENSAM & Arcelormittal Maizières Research, Metz, France (03/2023-Present)_
--  Collaborated on a high-profile project with Arcelor Mittal and ENSAM, contributing to advancements in shape optimization techniques.
--  Proficient in using ANSYS tools, specializing in adjoint optimization methods for efficient design enhancements.
--  Maintained an active role in the research community, attending workshops and seminars, to integrate the latest advancements into the project's workflow.
 -  Demonstrated expertise in turbulence modelling, boundary layer theory, and mesh generation within the ANSYS environment.
+-  Conducted high-fidelity CFD modeling of the continuous casting process using OpenFOAM, focusing on flow dynamics.
+-  Applied advanced AI/ML techniques to accelerate and improve the efficiency and robustness of the optimization processes.
+-  Designed and developed an open-source shape optimization framework tailored for CFD-based simulations and performance-driven design.
+-  Maintained an active role in the research community, attending workshops and seminars, to integrate the latest advancements into the project's workflow.
+-  Proficient in using ANSYS tools, specializing in adjoint optimization methods for efficient design enhancements.
 
 ### Research Associate
 _Khalifa University of Science and Technology, Abu Dhabi, UAE (07/2022 - 12/2022)_
