@@ -1,5 +1,6 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 title: Yuvraj Sarout
 logo: ![](Folder/Picture1c.png)
 #description: text below image
 show_downloads: true
+
