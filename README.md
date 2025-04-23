@@ -2,9 +2,11 @@
 # Doctoral Student
 
 
-I am Yuvraj Sarout, and I'm currently delving deep into the realms of shape optimization, combining the intricacies of computational fluid dynamics with the transformative power of machine learning during my PhD studies at École Nationale Supérieure d'Arts et Métiers in Metz, France. My journey in the field of mechanical engineering started at VIT University, Vellore, India. Here, I honed my skills in automotive engineering and graduated with a B.Tech, boasting an impressive GPA of 8.5/10. Furthering my academic pursuits, I acquired an MSc in Mechanical Engineering from Khalifa University of Science and Technology in Abu Dhabi, UAE, achieving a laudable GPA of 3.5/4. Professionally, I've made significant contributions as a Research Associate at Khalifa University of Science and Technology in Abu Dhabi, UAE. My research here primarily focused on the intricacies of Flow-induced Vibration, and I became adept at using tools such as ANSYS Fluent for advanced computational fluid dynamic simulations.
+I am Yuvraj Sarout, currently pursuing my PhD in shape optimization, where I combine the intricacies of computational fluid dynamics (CFD) with the transformative power of machine learning and AI open-source tools. My research focuses on leveraging these technologies for advanced optimization in engineering applications, particularly in the fields of materials processing and automotive systems. I'm conducting my PhD studies at École Nationale Supérieure d'Arts et Métiers in Metz, France.
 
+My journey in mechanical engineering began at VIT University in Vellore, India, where I earned a B.Tech in Automotive Engineering. I then pursued an MSc in Mechanical Engineering at Khalifa University of Science and Technology in Abu Dhabi, UAE. Professionally, I contributed as a Research Associate at Khalifa University, focusing on Flow-induced Vibration and conducting CFD simulations using tools like ANSYS Fluent. I have also gained proficiency in various open-source AI/ML frameworks to enhance engineering simulations and optimization workflows. I continuously integrate AI and open-source machine learning tools to improve the speed, accuracy, and efficiency of engineering optimization tasks, utilizing platforms such as TensorFlow, PyTorch, and Scikit-learn for data-driven solutions.
 
+</p>
 
 
 
