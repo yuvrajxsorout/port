@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvraj Sarout — PhD Researcher</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#ffffff;--bg2:#f8fafc;--card:#ffffff;--border:#e2e8f0;--accent:#4f46e5;--accent2:#7c3aed;--accent3:#0891b2;--text:#0f172a;--muted:#64748b;--glow:rgba(79,70,229,.08);--shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04)}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(255,255,255,.85);border-bottom:1px solid var(--border);transition:all .3s}
+.nav-logo{font-weight:900;font-size:1.1rem;color:var(--accent)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.3px;transition:color .3s;text-transform:uppercase}
+.nav-links a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 40px;background:var(--bg)}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(79,70,229,.04),transparent 50%),radial-gradient(ellipse at 80% 30%,rgba(124,58,237,.03),transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(8,145,178,.03),transparent 50%)}
+.hero-content{position:relative;z-index:2;max-width:780px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(79,70,229,.06);border:1px solid rgba(79,70,229,.12);border-radius:50px;padding:6px 16px;font-size:.73rem;color:var(--accent);font-weight:600;margin-bottom:22px;letter-spacing:.5px}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4rem);font-weight:900;line-height:1.08;margin-bottom:18px;color:var(--text)}
+.hero h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.02rem;color:var(--muted);max-width:580px;line-height:1.75;margin-bottom:32px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:10px;font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(79,70,229,.25)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(79,70,229,.3);background:#4338ca}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(79,70,229,.03)}
+.hero-stats{display:flex;gap:40px;margin-top:48px;padding-top:32px;border-top:1.5px solid var(--border)}
+.hero-stat .num{font-size:2rem;font-weight:900;color:var(--accent)}
+.hero-stat .lbl{font-size:.72rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* SECTIONS */
+section{padding:100px 40px}
+.section-header{text-align:center;margin-bottom:60px}
+.section-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);font-weight:700;margin-bottom:10px}
+.section-title{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:800;color:var(--text)}
+.section-line{width:40px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:14px auto 0;border-radius:3px}
+
+/* ABOUT */
+.about-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-text{font-size:.92rem;color:var(--muted);line-height:1.85}
+.about-text p+p{margin-top:16px}
+.about-text strong{color:var(--text);font-weight:600}
+.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:22px;text-align:center;transition:all .3s;box-shadow:var(--shadow)}
+.about-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 30px var(--glow)}
+.about-card .icon{font-size:1.5rem;margin-bottom:8px}
+.about-card .title{font-size:.8rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+.about-card .desc{font-size:.7rem;color:var(--muted)}
+
+/* SKILLS */
+.skills-container{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.skill-chip{background:var(--card);border:1.5px solid var(--border);border-radius:50px;padding:9px 22px;font-size:.82rem;font-weight:500;transition:all .3s;cursor:default;color:var(--text);box-shadow:var(--shadow)}
+.skill-chip:hover{border-color:var(--accent);box-shadow:0 4px 15px var(--glow);transform:scale(1.05);color:var(--accent)}
+.skill-chip.hl{background:rgba(79,70,229,.05);border-color:rgba(79,70,229,.2);color:var(--accent);font-weight:600}
+
+/* TIMELINE */
+.timeline{max-width:800px;margin:0 auto;position:relative}
+.timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),var(--border))}
+.tl-item{position:relative;padding-left:60px;margin-bottom:44px}
+.tl-dot{position:absolute;left:12px;top:6px;width:18px;height:18px;border-radius:50%;border:3px solid var(--accent);background:var(--bg);z-index:1;transition:all .3s}
+.tl-item:hover .tl-dot{background:var(--accent);box-shadow:0 0 0 5px rgba(79,70,229,.1)}
+.tl-date{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.tl-title{font-size:1.1rem;font-weight:700;margin-bottom:3px;color:var(--text)}
+.tl-sub{font-size:.83rem;color:var(--accent2);margin-bottom:10px;font-weight:500}
+.tl-desc{font-size:.82rem;color:var(--muted);line-height:1.75}
+.tl-desc li{margin-bottom:5px;list-style:none;position:relative;padding-left:16px}
+.tl-desc li::before{content:'›';position:absolute;left:0;color:var(--accent);font-weight:700}
+
+/* PUBLICATIONS */
+.pubs{max-width:900px;margin:0 auto}
+.pub{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:24px 24px 24px 28px;margin-bottom:12px;transition:all .3s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.pub::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.pub:hover{border-color:rgba(79,70,229,.25);transform:translateX(4px);box-shadow:0 8px 25px var(--glow)}
+.pub:hover::before{opacity:1}
+.pub-num{position:absolute;right:20px;top:14px;font-size:2.8rem;font-weight:900;color:rgba(79,70,229,.05);line-height:1}
+.pub-title{font-size:.88rem;font-weight:700;margin-bottom:6px;padding-right:40px;color:var(--text)}
+.pub-title a{color:var(--text);text-decoration:none;transition:color .3s}
+.pub-title a:hover{color:var(--accent)}
+.pub-authors{font-size:.77rem;color:var(--muted);margin-bottom:4px}
+.pub-venue{font-size:.75rem;color:var(--accent2);font-style:italic}
+.pub-year{display:inline-block;background:rgba(79,70,229,.07);color:var(--accent);font-size:.67rem;padding:3px 10px;border-radius:5px;font-weight:700;margin-bottom:8px}
+
+/* PROJECTS */
+.proj-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.proj{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:24px;transition:all .4s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.proj:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 16px 40px var(--glow)}
+.proj-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.proj-name{font-size:.86rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+.proj-dur{font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+
+/* CONTACT */
+.contact-wrap{max-width:700px;margin:0 auto;text-align:center}
+.contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:28px}
+.contact-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:18px 26px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:all .3s;min-width:200px;justify-content:center;box-shadow:var(--shadow)}
+.contact-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 25px var(--glow)}
+.contact-card .c-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+.contact-card .c-val{font-size:.84rem;font-weight:600;color:var(--text)}
+
+/* FOOTER */
+footer{text-align:center;padding:40px;border-top:1.5px solid var(--border);font-size:.75rem;color:var(--muted);background:var(--bg2)}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:14px 20px}.nav-links{gap:16px}.nav-links a{font-size:.72rem}
+  section{padding:60px 20px}.hero{padding:100px 20px}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  .contact-links{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .nav-links{display:none}
+  .hero h1{font-size:2rem}
+  .proj-grid{grid-template-columns:1fr}
+  .about-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">YS</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"><canvas id="particleCanvas"></canvas></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="dot"></span> PhD Researcher — ENSAM × ArcelorMittal</div>
+    <h1><span class="grad">Yuvraj Sarout</span><br>Shape Optimization &<br>Computational Fluid Dynamics</h1>
+    <p>Combining high-fidelity CFD simulations with machine learning to push the boundaries of engineering design optimization — from continuous casting to automotive aerodynamics.</p>
+    <div class="hero-btns">
+      <a href="#publications" class="btn btn-primary">📑 Publications</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">8</div><div class="lbl">Publications</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl">Degrees</div></div>
+      <div class="hero-stat"><div class="num">6+</div><div class="lbl">Years Research</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl">Countries</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header reveal"><div class="section-tag">Background</div><div class="section-title">About Me</div><div class="section-line"></div></div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a doctoral researcher at <strong>École Nationale Supérieure d'Arts et Métiers (ENSAM)</strong> in Metz, France, collaborating with <strong>ArcelorMittal Maizières Research</strong>. My PhD focuses on shape optimization applied to fluid-structure coupling in the steel continuous casting process.</p>
+      <p>My journey spans three countries — a B.Tech at <strong>VIT University</strong> in India, an MSc at <strong>Khalifa University</strong> in the UAE, and my current PhD in France. I integrate computational fluid dynamics with AI/ML frameworks like TensorFlow, PyTorch, and Scikit-learn to accelerate engineering optimization.</p>
+    </div>
+    <div class="about-cards reveal">
+      <div class="about-card"><div class="icon">🔬</div><div class="title">CFD & Optimization</div><div class="desc">OpenFOAM, ANSYS Fluent, Adjoint Methods</div></div>
+      <div class="about-card"><div class="icon">🤖</div><div class="title">AI / Machine Learning</div><div class="desc">TensorFlow, PyTorch, Scikit-learn</div></div>
+      <div class="about-card"><div class="icon">🏎️</div><div class="title">Automotive Aero</div><div class="desc">FSAE, Star-CCM+, Wind Tunnel</div></div>
+      <div class="about-card"><div class="icon">📐</div><div class="title">CAD & Meshing</div><div class="desc">SolidWorks, ICEM, Gmsh</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg2)">
+  <div class="section-header reveal"><div class="section-tag">Tech Stack</div><div class="section-title">Skills & Tools</div><div class="section-line"></div></div>
+  <div class="skills-container reveal">
+    <span class="skill-chip hl">ANSYS Fluent</span>
+    <span class="skill-chip hl">OpenFOAM</span>
+    <span class="skill-chip hl">Python</span>
+    <span class="skill-chip">Star-CCM+</span>
+    <span class="skill-chip">ANSYS FEA</span>
+    <span class="skill-chip">Tecplot</span>
+    <span class="skill-chip">ICEM</span>
+    <span class="skill-chip hl">TensorFlow</span>
+    <span class="skill-chip hl">PyTorch</span>
+    <span class="skill-chip">Scikit-learn</span>
+    <span class="skill-chip">SolidWorks</span>
+    <span class="skill-chip">MATLAB</span>
+    <span class="skill-chip">Origin Pro</span>
+    <span class="skill-chip">LaTeX</span>
+    <span class="skill-chip">Git</span>
+    <span class="skill-chip">Linux</span>
+    <span class="skill-chip">ParaView</span>
+    <span class="skill-chip hl">Bayesian Optimization</span>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-header reveal"><div class="section-tag">Journey</div><div class="section-title">Education & Experience</div><div class="section-line"></div></div>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Mar 2023 — Present</div>
+      <div class="tl-title">PhD in Mechanical Engineering</div>
+      <div class="tl-sub">ENSAM × ArcelorMittal Maizières Research — Metz, France</div>
+      <div class="tl-desc"><ul>
+        <li>Shape optimization for fluid-structure coupling in continuous casting</li>
+        <li>High-fidelity CFD modeling with OpenFOAM</li>
+        <li>AI/ML techniques for accelerating optimization</li>
+        <li>Open-source shape optimization framework development</li>
+        <li>Adjoint optimization methods in ANSYS</li>
+      </ul></div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Jul 2022 — Dec 2022</div>
+      <div class="tl-title">Research Associate</div>
+      <div class="tl-sub">Khalifa University — Abu Dhabi, UAE</div>
+      <div class="tl-desc"><ul>
+        <li>Flow-induced vibration with heat exchanger pipes</li>
+        <li>Turbulence modelling & results validation</li>
+        <li>Published in top conferences and journals</li>
+      </ul></div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Aug 2020 — Jul 2022</div>
+      <div class="tl-title">MSc + Graduate Research Assistant</div>
+      <div class="tl-sub">Khalifa University — Abu Dhabi, UAE &nbsp;·&nbsp; GPA 3.5/4</div>
+      <div class="tl-desc"><ul>
+        <li>Thesis: Wake & aerodynamic forces on tandem cylinders in cross-flow</li>
+        <li>Government-funded CFD and FEA research</li>
+        <li>Nuclear power plant flow analysis</li>
+      </ul></div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Jun 2016 — Jul 2020</div>
+      <div class="tl-title">B.Tech — Automotive Engineering</div>
+      <div class="tl-sub">VIT University — Vellore, India &nbsp;·&nbsp; GPA 8.5/10</div>
+      <div class="tl-desc"><ul>
+        <li>Thesis: Scramjet Inlet-Isolator simulation with pressure feedback</li>
+        <li>Aerodynamicist for Team Ojas (FSAE) — CFD & carbon fibre aero package</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" style="background:var(--bg2)">
+  <div class="section-header reveal"><div class="section-tag">Research Output</div><div class="section-title">Publications</div><div class="section-line"></div></div>
+  <div class="pubs" id="pubsList"></div>
+</section>
+
+<section id="projects">
+  <div class="section-header reveal"><div class="section-tag">Portfolio</div><div class="section-title">Projects</div><div class="section-line"></div></div>
+  <div class="proj-grid" id="projGrid"></div>
+</section>
+
+<section id="contact" style="background:var(--bg2)">
+  <div class="section-header reveal"><div class="section-tag">Let's Connect</div><div class="section-title">Get in Touch</div><div class="section-line"></div></div>
+  <div class="contact-wrap reveal">
+    <p style="color:var(--muted);margin-bottom:10px">Open to research collaborations, speaking invitations, and industry partnerships.</p>
+    <div class="contact-links">
+      <a href="mailto:yuvrajsorout007@gmail.com" class="contact-card"><div><div class="c-label">Email</div><div class="c-val">yuvrajsorout007@gmail.com</div></div></a>
+      <a href="https://linkedin.com/in/yuvrajxsarout" target="_blank" class="contact-card"><div><div class="c-label">LinkedIn</div><div class="c-val">yuvrajxsarout</div></div></a>
+      <a href="https://github.com/yuvrajxsorout" target="_blank" class="contact-card"><div><div class="c-label">GitHub</div><div class="c-val">yuvrajxsorout</div></div></a>
+      <div class="contact-card"><div><div class="c-label">Location</div><div class="c-val">Metz, France 🇫🇷</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Yuvraj Sarout &nbsp;·&nbsp; Built with passion and CFD-level precision</footer>
+
+<script>
+// PARTICLES — subtle indigo on white
+(function(){
+  const c=document.getElementById('particleCanvas'),ctx=c.getContext('2d');
+  let w,h,pts=[];
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight;}
+  resize();window.addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset();}
+    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.25;this.vy=(Math.random()-.5)*.25;this.r=Math.random()*1.8+.5;this.a=Math.random()*.18+.04;}
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1;}
+    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(79,70,229,${this.a})`;ctx.fill();}
+  }
+  for(let i=0;i<60;i++)pts.push(new P());
+  function loop(){
+    ctx.clearRect(0,0,w,h);
+    for(const p of pts){p.update();p.draw();}
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=`rgba(79,70,229,${.04*(1-d/130)})`;ctx.lineWidth=.5;ctx.stroke();}
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// PUBLICATIONS
+const pubs=[
+  {y:2023,t:"Flow-Induced Vibration and Heat Transfer Enhancement in Tandem Cylinders: Effects of Cylinder Shape, Corner Radii, and Spacing Ratio",a:"Sarout Y, Islam M, Ali U, Fatt YY, Janajreh I",v:"Ocean Engineering 285: 115397",doi:"10.1016/j.oceaneng.2023.115397"},
+  {y:2023,t:"Effect of Corner Radius on Flow Topology and Heat Transfer from Free Oscillating Tandem Cylinders at Low Reynolds Number",a:"Sarout Y, Islam M, Fatt YY, Janajreh I",v:"Physics of Fluids 35(1): 013607",doi:"10.1063/5.0132185"},
+  {y:2023,t:"Effects of Corner Radii on VIV With Forced Convection Heat Transfer From Angled Tandem-Cylinder at Low Re",a:"Sarout Y, Islam M, Janajreh I",v:"ASME IMECE 2022",doi:"10.1115/IMECE2022-94978"},
+  {y:2022,t:"Flow around an Oscillating Cylinder at Low Re with Forced Convection: Effect of Corner Radius and Reynolds Number",a:"Sarout Y, Islam M, Fatt Y, Janajreh I",v:"Energies 15(23): 9145",doi:"10.3390/en15239145"},
+  {y:2022,t:"Analysis of Corner Radius on the Free Oscillating Cylinder With Heat Transfer and Flow Pattern at Low Re",a:"Sarout Y, Islam MD, Fatt YY, Janajreh I",v:"ASME Heat Transfer Summer Conference 2022",doi:"10.1115/HT2022-85599"},
+  {y:2021,t:"Effect of Ramp Leading-Edge Blunt on the Performance of a Mach 4 Scramjet Intakes",a:"Paramasivam S, Sarout Y, Islam MD, Raj RTK",v:"AIAA Propulsion and Energy 2021 Forum",doi:"10.2514/6.2021-3540"},
+  {y:2020,t:"Numerical Simulation of Flow through Scramjet Inlet-Isolator Model with Cooling and Geometrical Modifications",a:"Sarout Y, Paramasivam S",v:"23rd AIAA Int'l Space Planes Conference",doi:"10.2514/6.2020-2440"},
+  {y:2020,t:"Flow through Scramjet Inlet-Isolator Model with Pressure Feedback",a:"Sarout Y, Paramasivam S",v:"AIAA SciTech 2020 Forum",doi:"10.2514/6.2020-0650"}
+];
+const pubsEl=document.getElementById('pubsList');
+pubs.forEach((p,i)=>{
+  pubsEl.innerHTML+=`<div class="pub reveal"><div class="pub-num">${String(i+1).padStart(2,'0')}</div><div class="pub-year">${p.y}</div><div class="pub-title"><a href="https://doi.org/${p.doi}" target="_blank">${p.t}</a></div><div class="pub-authors">${p.a}</div><div class="pub-venue">${p.v}</div></div>`;
+});
+
+// PROJECTS
+const projs=[
+  {n:"Shape Optimization for Continuous Casting",d:"2023 — Present",icon:"🔥",bg:"linear-gradient(135deg,rgba(79,70,229,.08),rgba(124,58,237,.06))"},
+  {n:"Flow-Induced Vibration of Filleted Cylinders",d:"02/2021 — 12/2022",icon:"🌊",bg:"linear-gradient(135deg,rgba(8,145,178,.08),rgba(79,70,229,.06))"},
+  {n:"Biomass Decarbonization Heat Model",d:"01/2022 — 04/2022",icon:"🌱",bg:"linear-gradient(135deg,rgba(22,163,74,.08),rgba(8,145,178,.06))"},
+  {n:"Water Impingement: Numerical vs Experimental",d:"01/2021 — 04/2021",icon:"💧",bg:"linear-gradient(135deg,rgba(59,130,246,.08),rgba(79,70,229,.06))"},
+  {n:"FSAE Car Aero Wing Optimization",d:"08/2019 — 01/2020",icon:"🏎️",bg:"linear-gradient(135deg,rgba(220,38,38,.08),rgba(124,58,237,.06))"},
+  {n:"Scramjet Intake Performance Optimization",d:"08/2018 — 09/2019",icon:"🚀",bg:"linear-gradient(135deg,rgba(234,88,12,.08),rgba(220,38,38,.06))"},
+  {n:"Probe Vibration Tracking — Wind Tunnel",d:"02/2022 — Present",icon:"📡",bg:"linear-gradient(135deg,rgba(124,58,237,.08),rgba(219,39,119,.06))"},
+  {n:"Bluff Body Flow at Low Reynolds Number",d:"08/2020 — 12/2020",icon:"🔄",bg:"linear-gradient(135deg,rgba(13,148,136,.08),rgba(59,130,246,.06))"},
+  {n:"RC Plane Design & Team Management",d:"2016 — 2020",icon:"✈️",bg:"linear-gradient(135deg,rgba(100,116,139,.08),rgba(79,70,229,.06))"}
+];
+const projEl=document.getElementById('projGrid');
+projs.forEach(p=>{
+  projEl.innerHTML+=`<div class="proj reveal"><div class="proj-icon" style="background:${p.bg}">${p.icon}</div><div class="proj-name">${p.n}</div><div class="proj-dur">${p.d}</div></div>`;
+});
+
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
